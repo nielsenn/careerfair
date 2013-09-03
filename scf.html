@@ -16,13 +16,17 @@
         <link rel="shortcut icon" href="img/logo.png" type="image/png" />
 
         <script src="js/jquery-1.9.1.min.js" type="text/javascript" ></script>
-        <script src="js/readmore.min.js" type="text/javascript" ></script>
-        <script type="text/javascript">
-            $(function(){
-                $("#toggle").click(function(){
-                    $("#companies").toggleClass("expand");
-                })
-            });
+        <script src="js/smooth-scroll.js" type="text/javascript" ></script>
+        <script>
+            $(document).ready(function (){
+              $("#header_join a").click(function (){
+                  //$(this).animate(function(){
+                      $('html, body').animate({
+                          scrollTop: $("#questions").offset().top
+                      }, 2000);
+                  //});
+              });
+          });
         </script>
     </head>
 
@@ -32,29 +36,21 @@
                 <div>
                     <h1>Startup</h1>
                     <h2>Career Fair</h2>
+                    <div class="header_time">
+                      <img src="img/place_white.png"/>
+                      <img src="img/date_white.png"/>
+                    </div>
+                    <div class="header_join">
+                      <a href="#questions"><img src="img/learn.png"/></a>
+                      <a target="_blank" href="apply.html"><img src="img/apply.png"/></a>
+                    </div>
                 </div>
-                <div class="scroll"></div>
             </div>
         </div>
 
         <div class="section">
             <div id="two">
-                <div class="content">
-                    <img src="img/place.png"/>
-                    <img src="img/date.png"/></br>
-                    <h3>The University of Michigan's startup</br>extravaganza and blah blah blah blah.</h3>
-                    <h3><span>100+ top-notch companies</span></br><span>2000+ talented hackers & hustlers</span></h3>
-                    <h3>A day of excessive swag, esteemed </br>speakers, and special events </br>(to be announced).</h3>
-                    <h3>Small companies, big opportunities.</br>Jeans and t-shirts encouraged.</br>Etc etc blah blah lorem ipsum.</h3>
-                    <h3>Questions? Email us at <a href="mailto:startUMup@umich.edu?Subject=We%20on!">startUMup@umich.edu</a></h3></br>
-
-                    <a><img src="img/faq.png"/></a>
-                    <a target="_blank" href="apply.html"><img src="img/apply.png"/></a>
-                </div>
-
-        <!--        <div id="faq">FAQ</div>     -->
-
-                <div class="questions">
+                <div id="questions">
                   <h3>What type of companies will attend?</h3>
 
                   <p>This is a career fair for startups specifically. If you’re unsure as to whether your company is considered a startup, please feel free to shoot us an email. U of M has amazing career fairs that you can find more information on here and here.</p>
@@ -63,7 +59,7 @@
 
                   <p>Firstly, they’re all brilliant. Second, they’ll range from undergraduate to graduate students from all colleges across the university. Check out our rankings in engineering, business, literature and science, information and public policy. We are specifically targeting the College of Engineering, the College of Literature, Science and Arts, the Ross School of Business and the School of Information.</p>
 
-                  <h3>How much does attendance cost?</h3>
+                  <h3>How much does company registration cost?</h3>
 
                   <p>The cost of the event follows the following dates. This one-time cost includes the table, food, and day-of resources.</p>
 
@@ -74,6 +70,10 @@
                   <p>$200: Registration Jan. 4 - Jan. 10, 2013</p>
 
                   <p>Transportation costs are not covered.</p>
+
+                  <h3>Where do I sign up?</h3>
+
+                  <p>Click <a target="_blank" href="apply.html">here</a> to apply for the 2014 MPowered Startup Career Fair.</p>
 
                   <h3>Who attended last year?</h3>
 
@@ -156,9 +156,7 @@
                      <img src="companies/synergybroad.png"/>
                      <img src="companies/synthesis.png"/>
                      <img src="companies/thinktech.png"/>
-                     <img src="companies/ugplogo.png"/>
                      <img src="companies/ultraelectronics.png"/>
-                     <img src="companies/umculogo.gif"/>
                      <img src="companies/upto.png"/>
                      <img src="companies/usdi.png"/>
                      <img src="companies/valicor.png"/>
@@ -170,7 +168,8 @@
                   </div>
               </div>
             </div> 
-            <a href="http://mpowered.umich.edu">&#169 2013 MPowered Entrepreneurship</a>     
+
+            <a id="copyright" href="http://mpowered.umich.edu">&#169 2013 MPowered Entrepreneurship</a>     
         </div>
     </body>
 </html>
