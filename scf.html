@@ -8,6 +8,7 @@
         <meta property="og:site_name" content="Startup Career Fair"/>
         <meta name="og:description" content="Here's to the crazy ones." />
         <meta property="og:type" content="website"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
         <title>Startup Career Fair</title>
 
@@ -16,18 +17,28 @@
         <link rel="shortcut icon" href="img/logo.png" type="image/png" />
 
         <script src="js/jquery-1.9.1.min.js" type="text/javascript" ></script>
-        <script src="js/smooth-scroll.js" type="text/javascript" ></script>
-        <script>
-            $(document).ready(function (){
-              $("#header_join a").click(function (){
-                  //$(this).animate(function(){
-                      $('html, body').animate({
-                          scrollTop: $("#questions").offset().top
-                      }, 2000);
-                  //});
-              });
+<!--        <script src="js/unslider.min.js"> </script>     -->
+        <script src="js/smooth-scroll.js" type="text/javascript" ></script>       
+<!--        <script>
+          $(function(){
+            $('#join').click(function () {
+                $('html, body').animate({ scrollTop: $('#two').offset().top }, 1000);
+            })
           });
-        </script>
+        </script>-->
+
+<!--        <script>
+          $(function autoResize(id){
+            var newheight;
+            var newwidth;
+
+            if(document.getElementById){
+                newheight=document.getElementById(id).contentWindow.document .body.scrollHeight;
+            }
+
+            document.getElementById(id).height= (newheight) + "px";
+          });
+        </script>         -->
     </head>
 
     <body>
@@ -41,7 +52,7 @@
                       <img src="img/date_white.png"/>
                     </div>
                     <div class="header_join">
-                      <a href="#questions"><img src="img/learn.png"/></a>
+                      <a id="join" href="#questions"><img src="img/learn.png"/></a>
                       <a target="_blank" href="apply.html"><img src="img/apply.png"/></a>
                     </div>
                 </div>
@@ -53,23 +64,19 @@
                 <div id="questions">
                   <h3>What type of companies will attend?</h3>
 
-                  <p>This is a career fair for startups specifically. If you’re unsure as to whether your company is considered a startup, please feel free to shoot us an email. U of M has amazing career fairs that you can find more information on here and here.</p>
+                  <p>This is a career fair exclusive to startups. If you’re unsure as to whether your company is considered a startup, please feel free to <a href="mailto:startUMup@umich.edu">shoot us an email.</a></p>
 
                   <h3>What students will be at the fair?</h3>
 
-                  <p>Firstly, they’re all brilliant. Second, they’ll range from undergraduate to graduate students from all colleges across the university. Check out our rankings in engineering, business, literature and science, information and public policy. We are specifically targeting the College of Engineering, the College of Literature, Science and Arts, the Ross School of Business and the School of Information.</p>
+                  <p>We've got them all.  Student attendees range from undergraduate to graduate students from all colleges across the university. We are specifically targeting our top-ranked College of Engineering, Ross School of Business and School of Art and Design.  Let us know who you're looking for, and we'll bring you the right students.</p>
 
                   <h3>How much does company registration cost?</h3>
 
-                  <p>The cost of the event follows the following dates. This one-time cost includes the table, food, and day-of resources.</p>
+                  <p>Registration cost is a one-time fee that covers a table at the fair, food, and attendance to our surprise day-of events which will be announced leading up to the fair.</p>
 
-                  <p>$100: Registration through Nov. 20, 2012</p>
-
-                  <p>$150: Registration Nov. 21 - Jan. 3, 2013</p>
-
-                  <p>$200: Registration Jan. 4 - Jan. 10, 2013</p>
-
-                  <p>Transportation costs are not covered.</p>
+                  <p>Early Bird Registration (through November 1st): $200</p>
+                  
+                  <p>Regular Registration: $300</p>
 
                   <h3>Where do I sign up?</h3>
 
@@ -169,7 +176,7 @@
               </div>
             </div> 
 
-            <a id="copyright" href="http://mpowered.umich.edu">&#169 2013 MPowered Entrepreneurship</a>     
+            <a class="copyright" href="http://mpowered.umich.edu">&#169 2013 MPowered Entrepreneurship</a>     
         </div>
     </body>
 </html>

@@ -32,12 +32,19 @@ html {
 	font-size: 24px;
   color: #ffffff;
   text-align: center;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
 }
 
-html {
-	position: relative; width: 100%; margin: 0 auto; padding: 0; background: url(../img/scf.jpg) no-repeat fixed; background-size: cover; background-position: center; 
+body {
+  background: url('../img/scf.jpg') no-repeat fixed;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  background-size: cover;
+  background-position: center;
 }
-
 
 /* HOME */
 
@@ -60,7 +67,7 @@ html {
   margin: auto;
   padding-top: 90px;
   font-family: 'novecento_wide_bookregular', sans-serif;
-  text-shadow: 0px 0px 20px #000000;
+  text-shadow: 0px 0px 10px #000000;
 }
 
 h1 {
@@ -73,19 +80,17 @@ h2 {
   letter-spacing: 20px;
 }
 
-#two {
-  width: 100%;
-  background-color: white;
-  box-shadow: 0 0 5px;
-  color: #313131;
-}
-
-
 h3 {
-  font-weight: normal;
+  font-weight: bold;
   padding: 20px 0;
 }
 
+#two {
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px;
+  color: #313131;
+}
 
 #questions {
   width: 704px;
@@ -96,6 +101,7 @@ h3 {
 
 #questions p {
   font-size: 18px;
+  padding: 10px 0;
 }
 
 #questions a {
@@ -106,15 +112,15 @@ h3 {
 #companies {
   min-width: 240px;
   margin: auto;
+  text-align: center;
 }
 
 #companies img {
-  width: 210;
-  height: 140;
   padding: 10px;
 }
 
-#copyright {
+
+a.copyright {
   font-size: 18px;
   color: #313131;
 }
@@ -122,12 +128,9 @@ h3 {
 /*-----------------*/
 
 #three {
-  width: 84%;
-
-  background:rgba(0,0,0,0.5);
-  border: 7px white solid;
-
-  margin: 40px auto;
+  background: rgba(0,0,0,0.5);
+  /*background:rgba(0,0,0,0.5);
+  border: 7px white solid;*/
 }
 
 #form {
@@ -138,26 +141,43 @@ h3 {
   color: white;
 }
 
+#form h3 {
+  width: 80%;
+  margin: auto;
+}
 
+.buttons #saveForm {
+  margin: auto;
+}
+
+#three a {
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.clear { clear: both; }
 
 @media only screen and (max-width: 1280px) {
   h1 {
-    font-size:140px;
+    font-size: 140px;
   }
 }
 
 @media only screen and (max-width: 1024px) {
   h1 {
-    font-size:100px;
+    font-size: 100px;
   }
 }
 
 @media only screen and (max-width: 970px) {
+  body {
+    background: #000000;
+  }
   #questions {
     width: 90% !important;
   }
   h1 {
-    font-size:60px;
+    font-size: 45px;
     letter-spacing: 15px;
   }
   h2 {
@@ -167,5 +187,8 @@ h3 {
   .header_join a {
     margin: 0;
     padding:0;
+  }
+  #three {
+    background: rgba(0,0,0);
   }
 }
